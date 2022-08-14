@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css_variables.css">
     <title>CSS variables and javascript</title>
 </head>
 <body>
@@ -18,45 +19,7 @@
     </div>
     <img src="./Gisam certificate.jpg" alt="">
 
-    <style>
-        :root{
-            --base: #ffc600;
-            --spacing: 10px;
-            --blur: 10px;
-        }
-        img{
-            padding: var(--spacing);
-            background: var(--base);
-            filter: var(--blur);
-        }
-        .hl{
-            color: var(--base);
-        }
-
-        body{
-            text-align: center;
-        }
-        body{
-            background: #193549;
-            color: white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: 100;
-            font-size: 50px;
-        }
-        .controls{
-            margin-bottom: 50px;
-        }
-    </style>
-
-    <script>
-        const inputs = document.querySelectorAll('.controls input')
-        function handleUpdates(){
-            const suffix = this.dataset.sizing || '';
-            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
-        }
-
-        inputs.forEach(input => input.addEventListener('change', handleUpdates))
-    </script>    
+    <script src="./css_variables.js"></script>
 
 </body>
 </html>
